@@ -1,4 +1,4 @@
-import { inject, Ref, ref } from "vue"
+import { inject, onMounted, Ref, ref } from "vue"
 import { iframeSrcDocKey } from "~/utils/provide-keys"
 
 interface ActionBarCtx {
@@ -22,6 +22,12 @@ export function useActionBar() {
     if(!inputTxt.value) return
     toEnter(ctx)
   }
+
+
+  onMounted(() => {
+    if(!inputEl.value) return
+    inputEl.value.focus()
+  })
 
 
   return {

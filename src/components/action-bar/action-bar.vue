@@ -19,6 +19,7 @@ const {
         v-model.trim="inputTxt" 
         @keyup.enter="onEnter"
         placeholder="What do you want to ask?"
+        autocomplete="off"
       />
     </div>
 
@@ -31,7 +32,7 @@ const {
 
 .ab-container {
   width: 100%;
-  padding-block-end: 30px;
+  padding-block-end: 38px;
   display: flex;
   justify-content: center;
   position: fixed;
@@ -42,6 +43,7 @@ const {
 }
 
 .ab-input-box {
+  max-width: 750px;
   width: 75%;
   height: 50px;
   box-sizing: border-box;
