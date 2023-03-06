@@ -48,14 +48,12 @@ const { t } = useI18n()
 <style scoped>
 
 .ab-container {
-  width: 100%;
-  padding-block-end: 38px;
+  width: 90%;
   display: flex;
   justify-content: center;
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  bottom: 38px;
+  left: 5%;
   z-index: 5000;
 }
 
