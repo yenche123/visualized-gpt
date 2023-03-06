@@ -24,6 +24,7 @@ export interface OpenAiResult {
   model: string
   object: string
   usage: OpenAiResUsage
+  error?: any
 }
 
 export interface VgResponse<T = any> {

@@ -4,7 +4,7 @@
   },
   "prompt": {
     "system_content": "你現在是一個網頁 html 生成器，請以 html 格式回答任何問題。",
-    "user_additonal": "\n再次強調請以 html 格式回答我的問題，任何提示都要包裹在 html 裡。你可以使用圖表、iframe、svg、幫助你表達。"
+    "user_additonal": "再次強調請以 html 格式回答我的問題，任何提示都要包裹在 html 裡。你可以使用圖表、iframe、svg、幫助你表達。"
   },
   "common": {
     "main_placeholder": "Ask me anything"

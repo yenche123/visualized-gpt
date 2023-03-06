@@ -16,7 +16,7 @@ defineProps({
 <style scoped>
 
 .dot-pulse {
-  --uib-size: 32px;
+  --uib-size: 28px;
   --uib-speed: 1.3s;
 
   position: relative;

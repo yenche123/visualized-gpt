@@ -94,7 +94,7 @@ const { t } = useI18n()
   background-color: var(--card-bg);
   box-shadow: 0 5px 10px rgba(0, 0, 0, .18);
   opacity: 1;
-  cursor: v-bind("inputTxt ? 'pointer' : 'auto'");
+  cursor: v-bind("isLoading ? 'auto' : inputTxt ? 'pointer' : 'auto'");
   flex: none;
   transition: .15s;
 }
@@ -106,7 +106,7 @@ const { t } = useI18n()
 
 @media(hover: hover) {
   .ab-submit-box:hover {
-    opacity: v-bind("inputTxt ? '.7' : '1'");
+    opacity: v-bind("isLoading ? '1' : inputTxt ? '.7' : '1'");
   }
 }
 

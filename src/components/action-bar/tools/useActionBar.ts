@@ -1,8 +1,9 @@
 import { inject, onMounted, Ref, ref } from "vue"
 import { iframeSrcDocKey } from "~/utils/provide-keys"
 import vgFetch from "~/requests/vg-fetch"
-import type { ChatMsg, OpenAiResult, VgResponse } from "~/types"
+import type { OpenAiResult, VgResponse } from "~/types"
 import API from "~/requests/API"
+import promptManager from "./prompt-manager"
 
 interface ActionBarCtx {
   srcDoc: Ref<string>
@@ -28,6 +29,10 @@ export function useActionBar() {
     if(!inputTxt.value) return
     if(isLoading.value) return
     toEnter(ctx)
+
+    if(inputEl.value) {
+      inputEl.value.blur()
+    }
   }
 
 
@@ -46,25 +51,49 @@ export function useActionBar() {
 }
 
 async function toEnter(ctx: ActionBarCtx) {
-  console.log("去 request..........")
 
-  const messages: ChatMsg[] = [
-    {
-      role: "system",
-      content: "你現在是一個網頁 html 生成器，請以 html 格式回答任何問題。"
-    },
-    {
-      role: "user",
-      content: ctx.inputTxt.value + "\n再次強調請以 html 格式回答我的問題，任何提示都要包裹在 html 裡。你可以使用圖表、iframe、svg、幫助你表達。",
-    }
-  ]
+  const userTxt = ctx.inputTxt.value
+  const messages = promptManager.getMessages(userTxt)
 
-  const res = await vgFetch.request<VgResponse<OpenAiResult>>(API.HELLO_WORLD, { messages })
+  console.log("看一下 messages: ")
+  console.log(messages)
+  console.log(" ")
+
+  ctx.isLoading.value = true
+  let res: VgResponse<OpenAiResult>
+
+  try {
+    res = await vgFetch.request<VgResponse<OpenAiResult>>(API.HELLO_WORLD, { messages })
+  }
+  catch(err) {
+    console.log("err: ", err)
+    ctx.isLoading.value = false
+    return
+  }
   
-  console.log("看一下 res.code: ")
-  console.log(res.code)
-  console.log("看一下 res.data: ")
-  console.log(res.data)
-  
+  ctx.isLoading.value = false
 
+  if(res.code !== "0000") {
+    console.warn("code 不等于 0000")
+    return
+  }
+
+  const openAiRes = res.data
+  if(!openAiRes) {
+    console.warn("res.data 不存在")
+    return
+  }
+
+  if(openAiRes.error) {
+    console.log("openAiRes error: ")
+    console.log(openAiRes)
+    return
+  }
+  
+  const newSrcDoc = promptManager.saveNewMessage(userTxt, openAiRes)
+  console.log("看一下 newSrcDoc: ")
+  console.log(newSrcDoc)
+  console.log(" ")
+  
+  ctx.srcDoc.value = newSrcDoc
 }
