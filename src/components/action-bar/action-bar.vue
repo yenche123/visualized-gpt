@@ -26,6 +26,17 @@ const { t } = useI18n()
         :placeholder="t('common.main_placeholder')"
         autocomplete="off"
       />
+
+      <div class="ab-little-btn">
+        <svg-icon class="ablb-svg" name="clean"
+          color="var(--normal-placeholder)"
+        ></svg-icon>
+      </div>
+      <div class="ab-little-btn">
+        <svg-icon class="ablb-svg" name="help"
+          color="var(--normal-placeholder)"
+        ></svg-icon>
+      </div>
     </div>
 
     <div class="ab-submit-box"
@@ -35,7 +46,7 @@ const { t } = useI18n()
 
       <DotpulseLoader v-if="isLoading"></DotpulseLoader>
       <svg-icon v-else name="send" class="ab-send"
-        :color="inputTxt ? 'var(--normal-color)' : 'var(--normal-placeholder)'"
+        :color="inputTxt ? 'var(--normal-color)' : 'var(--disable-color)'"
       ></svg-icon>
 
     </div>
@@ -62,24 +73,41 @@ const { t } = useI18n()
   width: 75%;
   height: 50px;
   box-sizing: border-box;
-  padding: 10px 24px;
+  padding: 10px 12px 10px 24px;
   margin-inline-end: 10px;
   border-radius: 25px;
   background-color: var(--card-bg);
   box-shadow: 0 5px 10px rgba(0, 0, 0, .18);
   position: relative;
+  display: flex;
 }
 
 .ab-input {
   color: var(--normal-color);
   line-height: 30px;
   height: 30px;
-  width: calc(100%);
+  width: calc(100% - 80px);
   font-size: var(--normal-font);
 }
 
 .ab-input::-webkit-input-placeholder {
   color: var(--normal-placeholder);
+}
+
+.ab-little-btn {
+  width: 35px;
+  height: 100%;
+  margin-inline-end: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .1s;
+}
+
+.ablb-svg {
+  width: 20px;
+  height: 20px;
 }
 
 .ab-submit-box {
@@ -103,6 +131,11 @@ const { t } = useI18n()
 }
 
 @media(hover: hover) {
+
+  .ab-little-btn:hover {
+    opacity: .7;
+  }
+
   .ab-submit-box:hover {
     opacity: v-bind("isLoading ? '1' : inputTxt ? '.7' : '1'");
   }
