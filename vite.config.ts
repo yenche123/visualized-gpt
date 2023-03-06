@@ -2,6 +2,8 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import VueI18n from '@intlify/unplugin-vue-i18n/vite'
 import { resolve } from "path"
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+const { version } = require("./package.json")
 
 const projectRoot = __dirname
 
@@ -24,5 +26,10 @@ export default defineConfig({
         resolve(projectRoot, "src/locales/messages/**")
       ]
     }),
+
+    createSvgIconsPlugin({
+      iconDirs: [resolve(process.cwd(), 'src/assets/icons')],
+      symbolId: 'icon-[dir]-[name]',
+    })
   ],
 })

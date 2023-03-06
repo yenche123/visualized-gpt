@@ -7,10 +7,12 @@ import API from "~/requests/API"
 interface ActionBarCtx {
   srcDoc: Ref<string>
   inputTxt: Ref<string>
+  isLoading: Ref<boolean>
 }
 
 export function useActionBar() {
 
+  const isLoading = ref(false)
   const srcDoc = inject(iframeSrcDocKey, ref(""))
   const inputEl = ref<HTMLInputElement | null>(null)
   const inputTxt = ref("")
@@ -18,11 +20,13 @@ export function useActionBar() {
   const ctx: ActionBarCtx = {
     srcDoc,
     inputTxt,
+    isLoading,
   }
 
 
   const onEnter = () => {
     if(!inputTxt.value) return
+    if(isLoading.value) return
     toEnter(ctx)
   }
 
@@ -37,6 +41,7 @@ export function useActionBar() {
     inputEl,
     inputTxt,
     onEnter,
+    isLoading,
   }
 }
 
