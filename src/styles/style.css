@@ -30,3 +30,17 @@ input {
   border: 0;
   outline: none;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}

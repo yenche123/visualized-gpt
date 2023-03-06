@@ -20,6 +20,8 @@ provide(iframeSrcDocKey, srcDoc)
     ></iframe>
   </div>
 
+  <div v-if="srcDoc.length > 300" class="hw-virtual"></div>
+
   <ActionBar></ActionBar>
 
 </template>
@@ -30,12 +32,18 @@ provide(iframeSrcDocKey, srcDoc)
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  position: relative;
 }
 
 .hw-iframe {
   border: 0;
   background-color: var(--bg-color);
   overflow: hidden;
+}
+
+.hw-virtual {
+  width: 100%;
+  height: 100px;
 }
 
 </style>
