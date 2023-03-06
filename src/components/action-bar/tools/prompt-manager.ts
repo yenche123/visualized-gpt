@@ -52,11 +52,11 @@ function saveNewMessage(newUserContent: string, openAiRes: OpenAiResult) {
   currentUsage = newUsage
 
   console.log(" ")
-  console.log("本轮用户提问: ", newPromptTokens)
-  console.log("本轮回答结果: ", newCompletionTokens)
-  console.log("list 数据: ")
+  console.log("User tokens in this round: ", newPromptTokens)
+  console.log("Completion token in this round: ", newCompletionTokens)
+  console.log("list: ")
   console.log(list)
-  console.log("最新 token 数据: ")
+  console.log("Latest usage data: ")
   console.log(currentUsage)
   console.log(" ")
 
@@ -89,7 +89,6 @@ function _initList() {
 function _trimList() {
   if(list.length < 4) return
   let totalToken = _getTotalToken()
-  console.log("当前 totalToken: ", totalToken)
   if(totalToken < 2800) return
   for(let i=1; i<list.length; i++) {
     let v = list[i]

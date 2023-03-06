@@ -67,10 +67,6 @@ async function toEnter(ctx: ActionBarCtx) {
   const userTxt = ctx.inputTxt.value
   const messages = promptManager.getMessages(userTxt)
 
-  console.log("看一下 messages: ")
-  console.log(messages)
-  console.log(" ")
-
   ctx.isLoading.value = true
   let res: VgResponse<OpenAiResult>
 
@@ -86,26 +82,26 @@ async function toEnter(ctx: ActionBarCtx) {
   ctx.isLoading.value = false
 
   if(res.code !== "0000") {
-    console.warn("code 不等于 0000")
+    console.warn("code is not equal to 0000")
+    console.log("res: ")
+    console.log(res)
+    console.log(" ")
     return
   }
 
   const openAiRes = res.data
   if(!openAiRes) {
-    console.warn("res.data 不存在")
+    console.warn("res.data doesn't exist")
     return
   }
 
   if(openAiRes.error) {
-    console.log("openAiRes error: ")
+    console.warn("openAiRes error: ")
     console.log(openAiRes)
     return
   }
   
   const newSrcDoc = promptManager.saveNewMessage(userTxt, openAiRes)
-  console.log("看一下 newSrcDoc: ")
-  console.log(newSrcDoc)
-  console.log(" ")
   
   ctx.srcDoc.value = newSrcDoc
 }
