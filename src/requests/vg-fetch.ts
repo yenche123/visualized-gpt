@@ -1,9 +1,11 @@
 import util from "~/utils/util"
 
-async function request(url: string, body?: Record<string, any>) {
+async function request<T = any>(
+  url: string, 
+  body?: Record<string, any>
+): Promise<T> {
 
   const Authentication = util.getEnv().VAL_TOWN_AUTH
-  console.log("看一下 Authentication: ", Authentication)
 
   const reqInit = {
     method: "POST",
@@ -14,8 +16,7 @@ async function request(url: string, body?: Record<string, any>) {
   const res = await fetch(url, reqInit)
 
   const res2 = await res.json()
-
-  return res2
+  return res2 as T
 }
 
 export default {

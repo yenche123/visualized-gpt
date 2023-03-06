@@ -1,9 +1,8 @@
 import { inject, onMounted, Ref, ref } from "vue"
 import { iframeSrcDocKey } from "~/utils/provide-keys"
 import vgFetch from "~/requests/vg-fetch"
-import type { ChatMsg } from "~/types"
+import type { ChatMsg, OpenAiResult, VgResponse } from "~/types"
 import API from "~/requests/API"
-
 
 interface ActionBarCtx {
   srcDoc: Ref<string>
@@ -47,21 +46,20 @@ async function toEnter(ctx: ActionBarCtx) {
   const messages: ChatMsg[] = [
     {
       role: "system",
-      content: "你現在是一個網頁 html，請以 html 格式回答任何問題，不要有任何非 html 格式以外的內容。你的回答將直接被放進 iframe 裡呈現。憑藉 html 布局和 css 樣式把你的回答可視化呈現出來以幫助使用者理解。"
+      content: "你現在是一個網頁 html 生成器，請以 html 格式回答任何問題。"
     },
     {
       role: "user",
-      content: ctx.inputTxt.value,
-    },
-    {
-      role: "system",
-      content: "再次強調，請以 html 格式輸出"
+      content: ctx.inputTxt.value + "\n再次強調請以 html 格式回答我的問題，任何提示都要包裹在 html 裡。你可以使用圖表、iframe、svg、幫助你表達。",
     }
   ]
 
-  const res = await vgFetch.request(API.HELLO_WORLD, { messages })
-  console.log("看一下 res: ")
-  console.log(res)
-  console.log(" ")
+  const res = await vgFetch.request<VgResponse<OpenAiResult>>(API.HELLO_WORLD, { messages })
+  
+  console.log("看一下 res.code: ")
+  console.log(res.code)
+  console.log("看一下 res.data: ")
+  console.log(res.data)
+  
 
 }
