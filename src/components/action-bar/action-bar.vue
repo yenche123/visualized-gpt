@@ -61,12 +61,12 @@ const { t } = useI18n()
 <style scoped>
 
 .ab-container {
-  width: 90%;
+  width: 94%;
   display: flex;
   justify-content: center;
   position: fixed;
   bottom: 38px;
-  left: 5%;
+  left: 3%;
   z-index: 5000;
 }
 
