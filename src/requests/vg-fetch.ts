@@ -6,6 +6,9 @@ async function request<T = any>(
 ): Promise<T> {
 
   const Authentication = util.getEnv().VAL_TOWN_AUTH
+  if(body) {
+    body.userId = util.getUserId()
+  }
 
   const reqInit = {
     method: "POST",
