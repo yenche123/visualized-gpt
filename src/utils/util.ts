@@ -16,10 +16,14 @@ function getUserId() {
 
 
 function getEnv() {
+  const VAL_TOWN_MAIN_FUNC = import.meta.env.VITE_VAL_TOWN_MAIN_FUNC
+  const VAL_TOWN_USERNAME = import.meta.env.VITE_VAL_TOWN_USERNAME
   const VAL_TOWN_AUTH = import.meta.env.VITE_VAL_TOWN_AUTH
   const UMAMI_ID = import.meta.env.VITE_UMAMI_ID
 
   return {
+    VAL_TOWN_MAIN_FUNC,
+    VAL_TOWN_USERNAME,
     VAL_TOWN_AUTH,
     UMAMI_ID,
   }
