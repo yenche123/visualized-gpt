@@ -9,6 +9,7 @@
   "common": {
     "main_placeholder": "Ask the magic mirror",
     "clear": "Clear",
-    "help": "Help"
+    "help": "Help",
+    "loading_tip": "It will take some time......"
   }
 }

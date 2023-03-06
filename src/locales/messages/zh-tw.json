@@ -9,6 +9,7 @@
   "common": {
     "main_placeholder": "向魔鏡提問......",
     "clear": "清除",
-    "help": "幫助"
+    "help": "幫助",
+    "loading_tip": "這需要一點時間......"
   }
 }

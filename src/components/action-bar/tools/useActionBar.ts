@@ -1,5 +1,5 @@
 import { inject, onMounted, Ref, ref } from "vue"
-import { iframeSrcDocKey } from "~/utils/provide-keys"
+import { iframeSrcDocKey, isLoadingKey } from "~/utils/provide-keys"
 import vgFetch from "~/requests/vg-fetch"
 import type { OpenAiResult, VgResponse } from "~/types"
 import API from "~/requests/API"
@@ -13,7 +13,7 @@ interface ActionBarCtx {
 
 export function useActionBar() {
 
-  const isLoading = ref(false)
+  const isLoading = inject(isLoadingKey, ref(false))
   const srcDoc = inject(iframeSrcDocKey, ref(""))
   const inputEl = ref<HTMLInputElement | null>(null)
   const inputTxt = ref("")

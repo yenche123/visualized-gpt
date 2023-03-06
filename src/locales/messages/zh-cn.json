@@ -9,6 +9,7 @@
   "common": {
     "main_placeholder": "向魔镜提问......",
     "clear": "清除",
-    "help": "帮助"
+    "help": "帮助",
+    "loading_tip": "这需要一点时间......"
   }
 }

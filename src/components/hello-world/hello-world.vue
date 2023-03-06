@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import { provide, ref } from 'vue';
 import ActionBar from '../action-bar/action-bar.vue';
-import { iframeSrcDocKey } from "~/utils/provide-keys";
+import LoadingTip from '../loading-tip/loading-tip.vue';
+import { iframeSrcDocKey, isLoadingKey } from "~/utils/provide-keys";
 
 const srcDoc = ref("<html></html>")
 provide(iframeSrcDocKey, srcDoc)
+
+const isLoading = ref(false)
+provide(isLoadingKey, isLoading)
 
 </script>
 
@@ -21,6 +25,8 @@ provide(iframeSrcDocKey, srcDoc)
   </div>
 
   <div v-if="srcDoc.length > 300" class="hw-virtual"></div>
+
+  <LoadingTip></LoadingTip>
 
   <ActionBar></ActionBar>
 
