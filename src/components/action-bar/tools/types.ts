@@ -1,3 +1,6 @@
+import type { ChatMsg } from "~/types"
 
-
-export type ActionBarState = "waiting" | "sending" | "responded" | "error"
+export interface VgMessageItem {
+  token: number
+  message: ChatMsg
+}
