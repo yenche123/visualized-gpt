@@ -86,7 +86,7 @@ const { t } = useI18n()
   color: var(--normal-color);
   line-height: 30px;
   height: 30px;
-  width: calc(100% - 80px);
+  width: calc(100% - 70px);
   font-size: var(--normal-font);
 }
 
