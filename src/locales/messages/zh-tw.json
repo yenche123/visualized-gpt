@@ -7,6 +7,8 @@
     "user_additonal": "（再次強調：請直接以 html 格式回答我的問題，你可以使用表格 / 圖片 / iframe / three.js 等元素或手段幫助你表達，並且請善用 CSS 把輸出的內容調整得美觀一點。）"
   },
   "common": {
-    "main_placeholder": "向魔鏡提問......"
+    "main_placeholder": "向魔鏡提問......",
+    "clear": "清除",
+    "help": "幫助"
   }
 }

@@ -3,7 +3,7 @@ import type { OpenAiResult, ChatMsg, OpenAiResUsage } from "~/types"
 import { i18n } from "~/locales"
 
 
-const initTokens = 30
+const initTokens = 100
 
 let list: VgMessageItem[] = []
 let currentUsage: OpenAiResUsage = {
@@ -63,6 +63,14 @@ function saveNewMessage(newUserContent: string, openAiRes: OpenAiResult) {
   return assistantMsg.content
 }
 
+function clear() {
+  currentUsage = {
+    completion_tokens: 0,
+    prompt_tokens: initTokens,
+    total_tokens: initTokens,
+  }
+  list = []
+}
 
 function _initList() {
   const { t } = i18n.global
@@ -101,4 +109,5 @@ function _getTotalToken() {
 export default {
   getMessages,
   saveNewMessage,
+  clear,
 }

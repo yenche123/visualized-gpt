@@ -8,6 +8,8 @@ const {
   inputTxt,
   onEnter,
   isLoading,
+  onTapClear,
+  onTapHelp,
 } = useActionBar()
 
 const { t } = useI18n()
@@ -27,12 +29,12 @@ const { t } = useI18n()
         autocomplete="off"
       />
 
-      <div class="ab-little-btn">
+      <div class="ab-little-btn" :title="t('common.clear')" @click="onTapClear">
         <svg-icon class="ablb-svg" name="clean"
           color="var(--normal-placeholder)"
         ></svg-icon>
       </div>
-      <div class="ab-little-btn">
+      <div class="ab-little-btn" :title="t('common.help')" @click="onTapHelp">
         <svg-icon class="ablb-svg" name="help"
           color="var(--normal-placeholder)"
         ></svg-icon>

@@ -7,6 +7,8 @@
     "user_additonal": "（再次强调：请直接以 html 格式回答我的问题，你返回的所有内容将直接被放进浏览器中渲染，故请确保其正确性）"
   },
   "common": {
-    "main_placeholder": "向魔镜提问......"
+    "main_placeholder": "向魔镜提问......",
+    "clear": "清除",
+    "help": "帮助"
   }
 }

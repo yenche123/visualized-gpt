@@ -35,6 +35,16 @@ export function useActionBar() {
     }
   }
 
+  const onTapClear = () => {
+    isLoading.value = false
+    inputTxt.value = ""
+    srcDoc.value = ""
+    promptManager.clear()
+  }
+
+  const onTapHelp = () => {
+    window.open("https://github.com/yenche123/visualized-gpt", "_blank")
+  }
 
   onMounted(() => {
     if(!inputEl.value) return
@@ -47,6 +57,8 @@ export function useActionBar() {
     inputTxt,
     onEnter,
     isLoading,
+    onTapClear,
+    onTapHelp,
   }
 }
 
