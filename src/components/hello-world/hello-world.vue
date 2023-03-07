@@ -3,6 +3,7 @@ import { provide, ref } from 'vue';
 import ActionBar from '../action-bar/action-bar.vue';
 import LoadingTip from '../loading-tip/loading-tip.vue';
 import { iframeSrcDocKey, isLoadingKey } from "~/utils/provide-keys";
+import CustomUi from '../custom-ui/custom-ui.vue';
 
 const srcDoc = ref("<html></html>")
 provide(iframeSrcDocKey, srcDoc)
@@ -29,6 +30,8 @@ provide(isLoadingKey, isLoading)
   <LoadingTip></LoadingTip>
 
   <ActionBar></ActionBar>
+
+  <CustomUi></CustomUi>
 
 </template>
 
