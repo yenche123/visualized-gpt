@@ -15,6 +15,26 @@ function getUserId() {
 }
 
 
+let openAiKey: string | null = null
+function getOpenAiKey() {
+  if(typeof openAiKey === "string") {
+    return openAiKey
+  }
+  const res = localStorage.getItem("vg-openai_key")
+  if(res) {
+    openAiKey = res
+    return openAiKey
+  }
+  openAiKey = ""
+  return ""
+}
+
+function setOpenAiKey(val: string) {
+  openAiKey = val
+  localStorage.setItem("vg-openai_key", val)
+}
+
+
 function getEnv() {
   const VAL_TOWN_MAIN_FUNC = import.meta.env.VITE_VAL_TOWN_MAIN_FUNC
   const VAL_TOWN_USERNAME = import.meta.env.VITE_VAL_TOWN_USERNAME
@@ -44,4 +64,6 @@ export default {
   getUserId,
   getEnv,
   waitMilli,
+  getOpenAiKey,
+  setOpenAiKey,
 }
