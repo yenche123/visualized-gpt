@@ -11,5 +11,15 @@
     "clear": "Clear",
     "help": "Help",
     "loading_tip": "It will take some time......"
+  },
+  "help": {
+    "openai_key_desc": "Optional. But it is recommanded to fill out because it can give you a magic mirror only for you. We promise never to collect your openai key.",
+    "openai_key_ph": "Your OpenAI Key",
+    "open_source": "Open Source",
+    "check_it_out": "Check out",
+    "contact_me": "Contact",
+    "twitter_desc": "My threads written in Traditional Chinese",
+    "mastodon_desc": "My threads written in English",
+    "email_desc": "Email me right now"
   }
 }

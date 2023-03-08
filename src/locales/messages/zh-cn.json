@@ -11,5 +11,15 @@
     "clear": "清除",
     "help": "帮助",
     "loading_tip": "这需要一点时间......"
+  },
+  "help": {
+    "openai_key_desc": "可选，但强烈建议填写，以获取专属于你的魔镜。你可以放心填写，我们承诺绝不收集你的 openai key。",
+    "openai_key_ph": "你的 OpenAI Key",
+    "open_source": "开源代码",
+    "check_it_out": "去查看",
+    "contact_me": "联系我",
+    "twitter_desc": "存放一些我的中文动态",
+    "mastodon_desc": "存放一些我的英文动态",
+    "email_desc": "使用邮箱，直接与我联系"
   }
 }

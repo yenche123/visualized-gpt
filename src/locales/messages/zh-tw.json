@@ -11,5 +11,15 @@
     "clear": "清除",
     "help": "幫助",
     "loading_tip": "這需要一點時間......"
+  },
+  "help": {
+    "openai_key_desc": "可選，但强烈建議填寫，以獲取專屬於你魔鏡。你可以放心填寫，我們承諾絕不收集你的 openai key。",
+    "openai_key_ph": "你的 OpenAI Key",
+    "open_source": "開放原始碼",
+    "check_it_out": "去查看",
+    "contact_me": "聯繫我",
+    "twitter_desc": "存放一些我的中文動態",
+    "mastodon_desc": "存放一些我的英文動態",
+    "email_desc": "使用電子郵件，直接與我聯繫"
   }
 }
