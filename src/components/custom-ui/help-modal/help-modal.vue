@@ -49,6 +49,72 @@ const { t } = useI18n()
         </a>
       </div>
 
+
+      <!-- Contact Me -->
+      <div class="hm-part">
+        <div class="hm-hd">
+          <span>{{ t('help.contact_me') }}</span>
+        </div>
+
+        <!-- Mastodon -->
+        <a class="hmp-contact" 
+          target="_blank"
+          href="https://elk.zone/universeodon.com/@yenche123"
+        >
+          <svg-icon name="mastodon" 
+            :coverFillStroke="false" 
+            class="hmp-contact-icon"
+          ></svg-icon>
+          <div class="hmp-contact-info">
+            <div class="hmp-contact-hd">
+              <span>Mastodon</span>
+            </div>
+            <div class="hmp-contact-bd">
+              <span>{{ t('help.mastodon_desc') }}</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Twitter -->
+        <a class="hmp-contact" 
+          target="_blank"
+          href="https://twitter.com/tsuijohn"
+        >
+          <svg-icon name="twitter" 
+            :coverFillStroke="false" 
+            class="hmp-contact-icon"
+          ></svg-icon>
+          <div class="hmp-contact-info">
+            <div class="hmp-contact-hd">
+              <span>Twitter</span>
+            </div>
+            <div class="hmp-contact-bd">
+              <span>{{ t('help.twitter_desc') }}</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Email -->
+        <a class="hmp-contact" 
+          target="_blank"
+          href="https://twitter.com/tsuijohn"
+        >
+          <svg-icon name="outlook" 
+            :coverFillStroke="false" 
+            class="hmp-contact-icon"
+          ></svg-icon>
+          <div class="hmp-contact-info">
+            <div class="hmp-contact-hd">
+              <span>Email</span>
+            </div>
+            <div class="hmp-contact-bd">
+              <span>{{ t('help.email_desc') }}</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
     </div>
   </div>
 
