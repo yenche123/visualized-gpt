@@ -1,7 +1,8 @@
 # visualized-gpt
 
-> 也許很多年後，人類回望 2023 年，只會覺得那時的人們是多麼地像猴子，竟然在對一個螢幕大吼大叫、興奮不已。
+[English](./README.md) | 中文
 
+> 也許很多年後，人類回望 2023 年，只會覺得那時的人們是多麼地像猴子，竟然在對一個螢幕大吼大叫、興奮不已。
 
 <img src="./docs/zh/location.png" width="500" />
 
@@ -21,7 +22,7 @@
 
 ## 體驗
 
-TODO
+https://visualized-gpt.vercel.app/
 
 ## 原理
 
