@@ -23,6 +23,10 @@
 
 TODO
 
+## 原理
+
+讓 ChatGPT 回傳 HTML 格式的文本，再把這段文本全部丟進 `<iframe />` 裡。就這麼簡單。
+
 ## 自行部署
 
 參見 [自行部署](./docs/deployment_zh.md)
