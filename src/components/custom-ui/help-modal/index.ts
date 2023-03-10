@@ -28,6 +28,7 @@ export function showHelpModal() {
 }
 
 function onTapMask() {
+  console.log("111111 onTapMask........")
   _close()
   _resolve && _resolve(true)
 }
@@ -41,7 +42,7 @@ async function _open() {
 }
 
 async function _close() {
-  if(show.value) return
+  if(!show.value) return
   show.value = false
   await util.waitMilli(duration)
   enable.value = false

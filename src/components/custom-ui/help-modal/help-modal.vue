@@ -19,12 +19,14 @@ const { t } = useI18n()
     :class="{ 'hm-container_show': show }"
   >
 
+    <div class="hm-bg" @click="onTapMask"></div>
+
     <div class="hm-box">
 
-      <!-- OpenAI Key -->
+      <!-- OpenAI API Key -->
       <div class="hm-part">
         <div class="hm-hd">
-          <span>OpenAI Key</span>
+          <span>OpenAI API Key</span>
         </div>
         <div class="hm-desc">
           <span>{{ t('help.openai_key_desc') }}</span>
@@ -51,7 +53,9 @@ const { t } = useI18n()
 
 
       <!-- Contact Me -->
-      <div class="hm-part">
+      <div class="hm-part"
+        style="padding-block-end: 0;"
+      >
         <div class="hm-hd">
           <span>{{ t('help.contact_me') }}</span>
         </div>
@@ -97,7 +101,7 @@ const { t } = useI18n()
         <!-- Email -->
         <a class="hmp-contact" 
           target="_blank"
-          href="https://twitter.com/tsuijohn"
+          href="mailto:tsuiyenche@outlook.com"
         >
           <svg-icon name="outlook" 
             :coverFillStroke="false" 
@@ -121,6 +125,153 @@ const { t } = useI18n()
 
 </template>
 <style scoped>
+
+.hm-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6000;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: v-bind("duration + 'ms'");
+}
+
+.hm-container_show {
+  opacity: 1;
+}
+
+.hm-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--popup-bg);
+}
+
+.hm-box {
+  width: 92%;
+  max-width: 550px;
+  border-radius: 24px;
+  background-color: var(--bg-color);
+  max-height: 80vh;
+  padding: 24px 14px 20px 24px;
+  overflow: scroll;
+  position: relative;
+}
+
+.hm-part {
+  padding-block-end: 20px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hm-hd {
+  margin-block-end: 4px;
+  font-size: var(--head-font);
+  color: var(--card-bg);
+  font-weight: 700;
+  user-select: none;
+}
+
+.hm-desc {
+  color: var(--whatever-color);
+  font-size: var(--mini-font);
+  line-height: 1.5;
+  margin-block-end: 10px;
+  width: 100%;
+  user-select: none;
+}
+
+.hm-input {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--normal-placeholder);
+  color: var(--card-bg);
+  font-size: var(--normal-font);
+  width: 90%;
+}
+
+.hm-input::placeholder {
+  color: var(--normal-placeholder);
+}
+
+.hm-btn {
+  background-color: var(--btn-bg);
+  padding: 8px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  transition: .15s;
+}
+
+.hm-opensource-icon {
+  width: 28px;
+  height: 28px;
+  margin-inline-end: 12px;
+}
+
+.hm-btn-text {
+  font-size: var(--normal-font);
+  color: var(--whatever-color);
+}
+
+.hmp-contact {
+  display: flex;
+  padding: 8px 12px;
+  border-radius: 8px;
+  max-width: 100%;
+  margin-block-end: 4px;
+  position: relative;
+  transition: .15s;
+  min-width: 90%;
+}
+
+.hmp-contact-icon {
+  width: 38px;
+  height: 38px;
+  margin-block-start: 6px;
+  margin-inline-end: 18px;
+}
+
+.hmp-contact-info {
+  flex: 1;
+  position: relative;
+  min-height: 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hmp-contact-hd {
+  font-size: var(--normal-font);
+  font-weight: 700;
+  color: var(--card-bg);
+}
+
+.hmp-contact-bd {
+  font-size: var(--mini-font);
+  color: var(--whatever-color);
+}
+
+@media(hover: hover) {
+  .hm-btn:hover {
+    background-color: var(--btn-hover-bg);
+  }
+
+  .hmp-contact:hover {
+    background-color: var(--normal-color);
+  }
+
+}
 
 
 </style>

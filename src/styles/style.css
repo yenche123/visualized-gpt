@@ -14,9 +14,13 @@
   --card-bg: #333;
   --normal-color: #f9f9f9;
   --normal-placeholder: #b0b0b0;
+  --btn-bg: #f1f1f1;
+  --btn-hover-bg: #e9e9e9;
   --disable-color: #666;
   --whatever-color: #686868;
+  --popup-bg: rgba(0, 0, 0, .75);
 
+  --head-font: 22px;
   --normal-font: 17px;
   --mini-font: 15px;
 }

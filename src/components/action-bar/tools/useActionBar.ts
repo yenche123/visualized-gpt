@@ -4,6 +4,7 @@ import vgFetch from "~/requests/vg-fetch"
 import type { OpenAiResult, VgResponse } from "~/types"
 import API from "~/requests/API"
 import promptManager from "./prompt-manager"
+import cui from "~/components/custom-ui"
 
 interface ActionBarCtx {
   srcDoc: Ref<string>
@@ -43,7 +44,7 @@ export function useActionBar() {
   }
 
   const onTapHelp = () => {
-    window.open("https://github.com/yenche123/visualized-gpt", "_blank")
+    cui.showHelpModal()
   }
 
   onMounted(() => {
