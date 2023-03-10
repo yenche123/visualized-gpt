@@ -20,9 +20,15 @@
 
 <img src="./docs/zh/ed_sheeran.png" width="700" />
 
-## 體驗
+## 馬上使用
+
+從下方連結中擇一訪問即可。
+
+https://visualized-gpt.zeabur.app/
 
 https://visualized-gpt.vercel.app/
+
+https://visualized-gpt.netlify.app/
 
 ## 原理
 

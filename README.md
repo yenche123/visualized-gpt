@@ -20,9 +20,16 @@ English | [中文](./README_zh.md)
 
 <img src="./docs/en/san_francisco.png" width="700" />
 
-## Experience
+## Use Instantly
+
+Select one of the following urls to experience it!
+
+https://visualized-gpt.zeabur.app/
 
 https://visualized-gpt.vercel.app/
+
+https://visualized-gpt.netlify.app/
+
 
 ## Principle
 
