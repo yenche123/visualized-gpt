@@ -4,7 +4,7 @@
   },
   "prompt": {
     "system_content": "You are a HTML generator. Please reply any question with the format of HTML.",
-    "user_additonal": "(Again, please answer my questions in the format of HTML, which means that any hint should be wrapped in HTML. You can use diagrams, iframes, or svg to help you express)"
+    "user_additonal": "(Please wrap your all answer in HTML when responding. Please give me HTML code without any explaination! You can enrich your answer by adding elements such as iframes, charts, SVG, etc. in HTML.)"
   },
   "common": {
     "main_placeholder": "Ask the magic mirror",
