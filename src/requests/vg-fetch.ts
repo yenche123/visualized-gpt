@@ -8,6 +8,10 @@ async function request<T = any>(
   const Authentication = util.getEnv().VAL_TOWN_AUTH
   if(body) {
     body.userId = util.getUserId()
+    const openAiKey = util.getOpenAiKey()
+    if(openAiKey) {
+      body.openAiKey = openAiKey
+    }
   }
 
   const reqInit = {
