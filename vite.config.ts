@@ -32,4 +32,11 @@ export default defineConfig({
       symbolId: 'icon-[dir]-[name]',
     })
   ],
+
+  define: {
+    "VG_ENV": {
+      "version": version,
+      "client": "web"
+    }
+  }
 })

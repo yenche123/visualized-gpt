@@ -17,7 +17,10 @@ async function request<T = any>(
   const reqInit = {
     method: "POST",
     body: body ? JSON.stringify(body) : "{}",
-    headers: { Authentication },
+    headers: {
+      Authentication,
+      "x-visualized-gpt-version": VG_ENV.version,
+    },
   } 
 
   const res = await fetch(url, reqInit)
