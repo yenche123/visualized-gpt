@@ -5,8 +5,12 @@ import { initHelpModal } from './index';
 const {
   enable,
   show,
+  inputTxt,
+  inputEl,
   duration,
   onTapMask,
+  onInputEnter,
+  onInputBlur,
 } = initHelpModal()
 
 const { t } = useI18n()
@@ -32,7 +36,13 @@ const { t } = useI18n()
           <span>{{ t('help.openai_key_desc') }}</span>
         </div>
 
-        <input class="hm-input" :placeholder="t('help.openai_key_ph')" />
+        <input class="hm-input" 
+          :placeholder="t('help.openai_key_ph')" 
+          ref="inputEl" 
+          v-model.trim="inputTxt" 
+          @keyup.enter="onInputEnter"
+          @blur="onInputBlur"
+        />
       </div>
 
       <!-- Open Source -->
@@ -50,7 +60,6 @@ const { t } = useI18n()
           </div>
         </a>
       </div>
-
 
       <!-- Contact Me -->
       <div class="hm-part"
