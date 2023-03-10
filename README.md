@@ -1,6 +1,6 @@
 # visualized-gpt
 
-> Perhaps many years later, when humans look back at the year 2023, they will only confuse why so many people at that time were like monkeys, shouting at a screen with huge excitement.
+> Perhaps many years from now, people will look back at the year 2023 and wonder why so many individuals were akin to monkeys, shouting at screens with great excitement.
 
 <img src="./docs/en/location.png" width="500" />
 

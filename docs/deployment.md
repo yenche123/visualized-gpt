@@ -30,7 +30,13 @@ The KEY name is `openai_key`, and the VALUE can be obtained from [OpenAI Api Key
 
 Open [cloud function](https://www.val.town/yenche.visualizedGpt), tap the `Fork` button, and then press `Run`, as shown below.
 
-// Image to be added
+<img src="./common/fork1.png" width="750"/>
+
+<img src="./common/fork2.png" width="700"/>
+
+Next, you can tap the 🔒 icon next to the cloud function name (as shown below) to switch the cloud function to public or private. If it is set to `private`, you must configure `VITE_VAL_TOWN_AUTH` in step 5.
+
+<img src="./common/private_or_public.png" width="700"/>
 
 ### 5. Configure environment variables
 
