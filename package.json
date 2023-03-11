@@ -1,7 +1,7 @@
 {
   "name": "visible-gpt",
-  "private": true,
   "version": "0.0.2",
+  "description": "Let GPT display the world with articles, tables, images, maps, videos, etc.",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -22,5 +22,21 @@
     "vite": "^4.1.0",
     "vite-plugin-svg-icons": "^2.0.1",
     "vue-tsc": "^1.0.24"
+  },
+  "author": "yenche123 <tsuiyenche@outlook.com> (https://github.com/yenche123)",
+  "contributors": [],
+  "keywords": [
+    "gpt",
+    "gpt-3.5",
+    "visualize",
+    "vite",
+    "vue3"
+  ],
+  "license": "MIT",
+  "repository": "github:yenche123/visualized-gpt",
+  "homepage": "https://visualized-gpt.netlify.app/",
+  "bugs": {
+    "url": "https://github.com/yenche123/visualized-gpt/issues",
+    "email": "tsuiyenche@outlook.com"
   }
 }
