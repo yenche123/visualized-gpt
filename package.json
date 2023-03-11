@@ -1,6 +1,6 @@
 {
   "name": "visible-gpt",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Let GPT display the world with articles, tables, images, maps, videos, etc.",
   "type": "module",
   "scripts": {
