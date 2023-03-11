@@ -2,8 +2,6 @@
 
 English | [中文](./README_zh.md)
 
-> Perhaps many years from now, people will look back at the year 2023 and wonder why so many individuals were akin to monkeys, shouting at screens with great excitement.
-
 <img src="./docs/en/location.png" width="500" />
 
 <img src="./docs/en/path.png" width="500" />
@@ -19,6 +17,11 @@ English | [中文](./README_zh.md)
 <img src="./docs/en/ed_sheeran.png" width="500" />
 
 <img src="./docs/en/san_francisco.png" width="700" />
+
+<br>
+
+> Perhaps many years from now, people will look back at the year 2023 and wonder why so many individuals were akin to monkeys, shouting at screens with great excitement.
+
 
 ## Use Instantly
 

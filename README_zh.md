@@ -2,8 +2,6 @@
 
 [English](./README.md) | 中文
 
-> 也許很多年後，人類回望 2023 年，只會覺得那時的人們是多麼地像猴子，竟然在對一個螢幕大吼大叫、興奮不已。
-
 <img src="./docs/zh/location.png" width="500" />
 
 <img src="./docs/zh/path.png" width="500" />
@@ -19,6 +17,11 @@
 <img src="./docs/zh/exchange_rate.png" width="600" />
 
 <img src="./docs/zh/ed_sheeran.png" width="700" />
+
+<br>
+
+> 也許很多年後，人類回望 2023 年，只會覺得那時的人們是多麼地像猴子，竟然在對一個螢幕大吼大叫、興奮不已。
+
 
 ## 馬上使用
 
