@@ -163,7 +163,7 @@ const { t } = useI18n()
 }
 
 .hm-box {
-  width: 92%;
+  width: 82%;
   max-width: 550px;
   border-radius: 24px;
   background-color: var(--bg-color);
@@ -271,6 +271,14 @@ const { t } = useI18n()
   color: var(--whatever-color);
 }
 
+.hm-btn:active {
+  background-color: var(--btn-hover-bg);
+}
+
+.hmp-contact:active {
+  background-color: var(--normal-color);
+}
+
 @media(hover: hover) {
   .hm-btn:hover {
     background-color: var(--btn-hover-bg);
@@ -280,6 +288,26 @@ const { t } = useI18n()
     background-color: var(--normal-color);
   }
 
+}
+
+@media screen and (max-width: 380px) {
+
+  .hm-box {
+    width: 80%;
+    padding: 24px 10px 16px 20px;
+  }
+
+  .hmp-contact {
+    margin-block-end: 2px;
+  }
+
+  .hmp-contact-icon {
+    width: 32px;
+    height: 32px;
+    margin-block-start: 8px;
+    margin-inline-end: 14px;
+  }
+  
 }
 
 

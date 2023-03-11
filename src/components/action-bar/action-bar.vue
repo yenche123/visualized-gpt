@@ -144,6 +144,21 @@ const { t } = useI18n()
 }
 
 
+@media screen and (max-width: 380px) {
+  .ab-container {
+    width: 96%;
+    bottom: 32px;
+    left: 2%;
+  }
+
+  .ab-input-box {
+    width: auto;
+    flex: 1;
+  }
+
+}
+
+
 
 
 </style>
