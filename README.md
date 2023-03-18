@@ -34,7 +34,7 @@ https://visualized-gpt.vercel.app/
 https://visualized-gpt.netlify.app/
 
 
-## Principle
+## How it works
 
 Let ChatGPT return the text in HTML format, and then put it all into `<iframe />`. It's just that simple.
 
